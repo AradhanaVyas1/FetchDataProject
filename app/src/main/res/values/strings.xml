@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Fetch Reward Excercise</string>
+    <string name="filter_by_name">Filter by name</string>
+    <string name="sort_by_number_in_name">Sort by Number in Name</string>
+    <string name="apply_filter">Apply Filter</string>
+</resources>
