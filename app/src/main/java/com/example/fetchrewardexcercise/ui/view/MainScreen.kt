@@ -40,12 +40,14 @@ import com.example.fetchrewardexcercise.ui.viewmodel.ItemViewModel
 @Composable
 fun MainScreen(viewModel: ItemViewModel) {
     val items by viewModel.filteredItems.collectAsState()
-    val filterQuery by viewModel.filterQuery.collectAsState()
     val filterMode by viewModel.filterMode.collectAsState()
 
     var inputText by remember { mutableStateOf("") }
 
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+
+        Spacer(modifier = Modifier.height(40.dp))
+
         TextField(
             value = inputText,
             onValueChange = { inputText = it },

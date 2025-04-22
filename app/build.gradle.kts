@@ -18,9 +18,17 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     buildTypes {
+        debug {
+            buildConfigField ("String", "BASE_URL", "\"https://fetch-hiring.s3.amazonaws.com/\"")
+        }
         release {
-            isMinifyEnabled = false
+            buildConfigField ("String", "BASE_URL", "\"https://fetch-hiring.s3.amazonaws.com/\"")
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
